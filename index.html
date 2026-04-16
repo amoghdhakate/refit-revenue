@@ -1,5 +1,10 @@
 
 <style>
+body {
+  transform: scale(2.4);
+  transform-origin: top left;
+  width: 41.67%; /* 100 / 2.4 to prevent overflow */
+}
 * { box-sizing: border-box; margin: 0; padding: 0; }
 .wrap { max-width: 740px; margin: 0 auto; padding: 1.5rem 0; font-family: var(--font-sans); }
 .sr-only { position: absolute; left: -9999px; }
