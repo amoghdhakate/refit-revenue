@@ -1,0 +1,216 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+.wrap { max-width: 740px; margin: 0 auto; padding: 1.5rem 0; font-family: var(--font-sans); }
+.sr-only { position: absolute; left: -9999px; }
+.ch-label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-secondary); margin-bottom: 10px; }
+.card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; }
+.stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 1.25rem; }
+.stat { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px; text-align: center; }
+.stat-num { font-size: 22px; font-weight: 500; color: #1D9E75; }
+.stat-lbl { font-size: 11px; color: var(--color-text-secondary); margin-top: 3px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead tr { border-bottom: 0.5px solid var(--color-border-tertiary); }
+th { padding: 8px 10px; text-align: left; font-weight: 500; font-size: 12px; color: var(--color-text-secondary); }
+th.right, td.right { text-align: right; }
+th.center, td.center { text-align: center; }
+td { padding: 9px 10px; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); vertical-align: middle; }
+tr:last-child td { border-bottom: none; }
+.prod-name { font-weight: 500; color: var(--color-text-primary); font-size: 13px; }
+.prod-desc { font-size: 11px; color: var(--color-text-secondary); margin-top: 1px; }
+.price-refit { color: #1D9E75; font-weight: 500; }
+.price-local { color: #888780; }
+.price-brand { color: var(--color-text-secondary); }
+.price-premium { color: #993C1D; }
+.save-pill { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 99px; background: #E1F5EE; color: #085041; font-weight: 500; }
+.brand-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 1.25rem; }
+.brand-col { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 12px; }
+.brand-col.refit-col { background: #E1F5EE; border: 1.5px solid #5DCAA5; }
+.brand-tag { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.07em; color: var(--color-text-secondary); margin-bottom: 4px; }
+.brand-tag.refit-tag { color: #085041; }
+.brand-name-lbl { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px; }
+.brand-feat { font-size: 11px; color: var(--color-text-secondary); line-height: 1.55; padding: 2px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.brand-feat:last-child { border-bottom: none; }
+.brand-feat.good { color: #0F6E56; }
+.brand-feat.bad { color: #993C1D; }
+.note { font-size: 12px; color: var(--color-text-secondary); margin-top: 10px; line-height: 1.6; }
+.chart-wrap { position: relative; width: 100%; height: 300px; margin-top: 1.25rem; }
+</style>
+
+<div class="wrap">
+<h2 class="sr-only">ReFit pricing estimates compared to local fabricators, Indian brands, and premium brands across key products</h2>
+
+<div class="stat-row">
+  <div class="stat"><div class="stat-num">70%</div><div class="stat-lbl">avg savings vs Indian brands</div></div>
+  <div class="stat"><div class="stat-num">85%</div><div class="stat-lbl">avg savings vs premium brands</div></div>
+  <div class="stat"><div class="stat-num">2x</div><div class="stat-lbl">safer than local scrap welders</div></div>
+</div>
+
+<p class="ch-label">Product-wise price comparison (₹)</p>
+<div class="card" style="padding: 0; overflow: hidden;">
+  <table>
+    <thead>
+      <tr>
+        <th style="width:28%">Product</th>
+        <th class="right">ReFit</th>
+        <th class="right">Local welder</th>
+        <th class="right">Indian brand</th>
+        <th class="right">Premium brand</th>
+        <th class="center">You save vs brands</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><div class="prod-name">Flat bench</div><div class="prod-desc">Weight training bench</div></td>
+        <td class="right price-refit">₹2,500</td>
+        <td class="right price-local">₹1,800</td>
+        <td class="right price-brand">₹8,000</td>
+        <td class="right price-premium">₹22,000</td>
+        <td class="center"><span class="save-pill">69% off</span></td>
+      </tr>
+      <tr>
+        <td><div class="prod-name">Pull-up bar frame</div><div class="prod-desc">Free-standing rig</div></td>
+        <td class="right price-refit">₹4,500</td>
+        <td class="right price-local">₹3,200</td>
+        <td class="right price-brand">₹14,000</td>
+        <td class="right price-premium">₹38,000</td>
+        <td class="center"><span class="save-pill">68% off</span></td>
+      </tr>
+      <tr>
+        <td><div class="prod-name">Squat rack</div><div class="prod-desc">Full power cage</div></td>
+        <td class="right price-refit">₹8,000</td>
+        <td class="right price-local">₹5,500</td>
+        <td class="right price-brand">₹25,000</td>
+        <td class="right price-premium">₹75,000</td>
+        <td class="center"><span class="save-pill">68% off</span></td>
+      </tr>
+      <tr>
+        <td><div class="prod-name">Dumbbell set (5–30kg)</div><div class="prod-desc">Cast iron, rubber coated</div></td>
+        <td class="right price-refit">₹6,500</td>
+        <td class="right price-local">₹4,800</td>
+        <td class="right price-brand">₹18,000</td>
+        <td class="right price-premium">₹45,000</td>
+        <td class="center"><span class="save-pill">64% off</span></td>
+      </tr>
+      <tr>
+        <td><div class="prod-name">Barbell + plates set</div><div class="prod-desc">20 kg bar + 100 kg plates</div></td>
+        <td class="right price-refit">₹7,000</td>
+        <td class="right price-local">₹5,000</td>
+        <td class="right price-brand">₹20,000</td>
+        <td class="right price-premium">₹55,000</td>
+        <td class="center"><span class="save-pill">65% off</span></td>
+      </tr>
+      <tr>
+        <td><div class="prod-name">Multi-gym cable machine</div><div class="prod-desc">Lat, chest, row station</div></td>
+        <td class="right price-refit">₹18,000</td>
+        <td class="right price-local">₹12,000</td>
+        <td class="right price-brand">₹55,000</td>
+        <td class="right price-premium">₹1,60,000</td>
+        <td class="center"><span class="save-pill">67% off</span></td>
+      </tr>
+      <tr>
+        <td><div class="prod-name">Complete gym setup</div><div class="prod-desc">10–12 piece full set</div></td>
+        <td class="right price-refit">₹65,000</td>
+        <td class="right price-local">₹45,000</td>
+        <td class="right price-brand">₹2,00,000</td>
+        <td class="right price-premium">₹8,00,000</td>
+        <td class="center"><span class="save-pill">68% off</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p class="note">* Prices are estimated based on Indian market rates. ReFit prices assume scrap-sourced materials + fabrication labour. Local welder = informal sector with no safety certification. Indian brand = Cosco / Lifelong / KFS tier. Premium brand = Technogym / Eleiko / Life Fitness tier.</p>
+
+<p class="ch-label" style="margin-top:1.5rem;">What each tier gives you</p>
+<div class="brand-row">
+  <div class="brand-col">
+    <div class="brand-tag">Local welder</div>
+    <div class="brand-name-lbl">Informal scrap</div>
+    <div class="brand-feat good">Cheapest price</div>
+    <div class="brand-feat bad">No safety cert</div>
+    <div class="brand-feat bad">No warranty</div>
+    <div class="brand-feat bad">No brand trust</div>
+    <div class="brand-feat bad">Inconsistent quality</div>
+  </div>
+  <div class="brand-col refit-col">
+    <div class="brand-tag refit-tag">ReFit — our brand</div>
+    <div class="brand-name-lbl">Scrap, certified</div>
+    <div class="brand-feat good">70% below brands</div>
+    <div class="brand-feat good">Safety certified</div>
+    <div class="brand-feat good">Warranty included</div>
+    <div class="brand-feat good">Sustainable story</div>
+    <div class="brand-feat good">AI-optimized design</div>
+  </div>
+  <div class="brand-col">
+    <div class="brand-tag">Indian brands</div>
+    <div class="brand-name-lbl">Cosco / KFS / Lifelong</div>
+    <div class="brand-feat good">Certified quality</div>
+    <div class="brand-feat good">Brand recognition</div>
+    <div class="brand-feat bad">3–4x ReFit price</div>
+    <div class="brand-feat bad">No sustainability</div>
+    <div class="brand-feat bad">Out of reach for many</div>
+  </div>
+  <div class="brand-col">
+    <div class="brand-tag">Premium brands</div>
+    <div class="brand-name-lbl">Technogym / Eleiko</div>
+    <div class="brand-feat good">World-class quality</div>
+    <div class="brand-feat good">Some eco efforts</div>
+    <div class="brand-feat bad">10–12x ReFit price</div>
+    <div class="brand-feat bad">Only for elite gyms</div>
+    <div class="brand-feat bad">Not India-focused</div>
+  </div>
+</div>
+
+<div class="chart-wrap">
+  <canvas id="priceChart" role="img" aria-label="Bar chart comparing prices of a complete gym setup across ReFit, local welder, Indian brand, and premium brand">Complete gym setup cost: ReFit ₹65,000, Local welder ₹45,000, Indian brand ₹2,00,000, Premium brand ₹8,00,000.</canvas>
+</div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+new Chart(document.getElementById('priceChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Local welder\n(no cert)', 'ReFit\n(certified)', 'Indian brand\n(Cosco/KFS)', 'Premium brand\n(Technogym)'],
+    datasets: [{
+      label: 'Full gym setup cost (₹)',
+      data: [45000, 65000, 200000, 800000],
+      backgroundColor: ['#B4B2A9', '#1D9E75', '#378ADD', '#D85A30'],
+      borderRadius: 6,
+      borderSkipped: false
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: function(ctx) {
+            return '₹' + ctx.parsed.y.toLocaleString('en-IN');
+          }
+        }
+      }
+    },
+    scales: {
+      x: {
+        grid: { display: false },
+        ticks: { font: { size: 11 }, color: '#888780', autoSkip: false }
+      },
+      y: {
+        grid: { color: 'rgba(136,135,128,0.15)' },
+        ticks: {
+          font: { size: 11 },
+          color: '#888780',
+          callback: function(v) {
+            if (v >= 100000) return '₹' + (v/100000).toFixed(0) + 'L';
+            return '₹' + (v/1000).toFixed(0) + 'K';
+          }
+        }
+      }
+    }
+  }
+});
+</script>
